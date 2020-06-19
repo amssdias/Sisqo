@@ -1,0 +1,75 @@
+.header
+{
+    position: relative;
+    //background-image: linear-gradient(to right bottom,rgba(67, 67, 67, 0.3) 20%, #000000, rgba(67, 67, 67, 0.5));
+    background-color: rgba(255, 255,255, .8);
+    padding: 2rem;
+    margin-top: 3rem;
+    box-shadow: 0rem .2rem 1rem #000000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 2;
+
+    &__list
+    {
+        list-style: none;
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        margin: 0rem;
+
+        @media screen and (max-width: 992px)
+        {
+            width: 80%;
+        }
+
+        @media screen and (max-width: 767px)
+        {
+            width: 95%;
+        }
+    }
+
+
+    &__link:link,
+    &__link:visited
+    {
+        text-decoration: none;
+        font-size: 1.8rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: black;
+
+        transition: all .3s;
+
+        @media screen and (max-width: 767px)
+        {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__link::after
+    {
+        content: "";
+        display: block;
+        height: 2px;
+        background-color: black;
+        transform:scale(0);
+        transition: .3s;
+    }
+
+    &__link:hover::after
+    {
+        transform-origin: 50%;
+        transform: scale(1);
+        height: 2px;
+    }
+}
+
+
+.logo
+{
+    position: absolute;
+}

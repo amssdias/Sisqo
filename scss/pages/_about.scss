@@ -1,0 +1,74 @@
+.bg-img-about
+{
+    background-image: linear-gradient(
+        rgba(0,0,0,0.3), 
+        rgba(0,0,0,0.7)),
+     url(../img/about.jpg);
+
+    @extend %backgrounds-shared;
+    bottom: -20rem;
+}
+
+.section-about
+{
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    &__img-title
+    {
+        height: 10rem;
+        width: 50%;
+        //border: 2px solid green;
+        object-fit: cover;
+        overflow: hidden;
+
+        @media screen and (max-width: 992px)
+        {
+            width: 60%;
+        }
+
+        @media screen and (max-width: 767px)
+        {
+            width: 90%;
+        }
+    }
+
+    &__col-1
+    {
+        background-color: rgba(255, 255, 255, 0.0);
+        padding: 2rem 4rem;
+    }
+
+    &__col-2
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--img-1
+        {
+            width: 80%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 1rem;
+
+            animation-name: about-image;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+
+            transition: .3s;
+
+            &:hover
+            {
+                transform: scale(1.1);
+                outline: .7rem solid yellow;
+                padding: 1rem;
+            }
+            
+        }
+    }
+}

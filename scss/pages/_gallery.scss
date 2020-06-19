@@ -1,0 +1,83 @@
+.bg-img-gallery
+{
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(0, 0, 0, 0.8), 
+        rgba(0, 0, 0, 0.5)) ,
+        url(../img/gallery/p-6.jpg);
+
+    @extend %backgrounds-shared;
+    bottom: -90rem;
+}
+
+
+
+.section-gallery
+{
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+   
+    padding: 7rem;
+
+    @media screen and (max-width: 767px)
+    {
+        padding: 0rem 2rem;
+    }
+
+    &__col-1
+    {
+        transform: translateY(5rem);
+        @media screen and (max-width: 992px)
+        {
+            transform: translateY(0rem);
+        }
+
+    }
+
+    &__col-2
+    {
+        transform: translateY(-3rem);
+        @media screen and (max-width: 992px)
+        {
+            transform: translateY(0rem);
+        }
+
+    }
+
+    &__col-3
+    {
+        transform: translateY(2.5rem);
+        @media screen and (max-width: 992px)
+        {
+            transform: translateY(0rem);
+        }
+
+    }
+
+    &__img
+    {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        z-index: -5;
+
+        border: 1rem solid #fed330;
+        
+        filter: grayscale(100%);
+        transition: .3s;
+
+        @media screen and (max-width: 991px)
+        {
+            filter:grayscale(0%);
+        }
+
+
+        &:hover
+        {
+            filter: grayscale(0%);
+            transform: scale(1.2) translateY(-2rem);
+            z-index: 10;
+
+        }
+    }
+}

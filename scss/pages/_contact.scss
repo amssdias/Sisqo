@@ -1,0 +1,81 @@
+.section-contact
+{
+    margin-top: 5rem;
+
+    &__col-8
+    {
+        @extend %contact-columns-layout;
+    }
+
+    &__col-4
+    {
+        @extend %contact-columns-layout;
+
+        &__icon
+        {
+            color: green;
+            margin-right: 1rem;
+        }
+
+        &__link
+        {
+            color: $color-white;
+            border-bottom: 1px solid $color-white;
+
+
+            &:hover
+            {
+                color: rgba(255,255,255,0.6);
+                border-bottom: 1px solid rgba(255,255,255,0.6);
+                cursor: pointer;
+                text-decoration: none;
+            }
+        }
+    }
+
+
+    &__box
+    {
+        width: 70%;
+    }
+
+    &__input
+    {
+        display: block;
+        width: 100%;
+        margin-bottom: 4rem;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid grey;
+    }
+
+    &__input:focus
+    {
+        outline: none;
+        color: $color-white;
+    }
+
+    &__button
+    {
+        padding: .5rem 1.8rem;
+        border-radius: 1rem;
+        background-color: #3498db;
+        border: none;
+        font-size: 1.6rem;
+        color: $color-white;
+
+        transition: .3s;
+
+        &:hover
+        {
+            transform: translateY(-.3rem);
+            background-color: #3498db96;
+        }
+
+        &:active
+        {
+            outline: none;
+        }
+
+    }
+}

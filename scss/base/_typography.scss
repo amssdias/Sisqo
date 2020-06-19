@@ -1,0 +1,40 @@
+.heading-secondary
+{
+    margin: 0;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+}
+
+.heading-forth
+{
+    font-size: 1.6rem;
+}
+
+.paragraph
+{
+    font-size: 1.8rem;
+    text-align: left;
+}
+
+.link-contact:link,
+.link-contact:visited
+{
+    display: inline-block;
+    text-decoration: none;
+    color: #3498db;
+    font-size: 1.6rem;
+    border-bottom: 1px solid #3498db;
+    padding: .5rem .7rem;
+    transform: translateY(0);
+
+    transition: .3s;
+
+
+    &:hover
+    {
+        transform: translateY(-.4rem);
+        padding: .5rem .7rem;
+        background-color: #3498db;
+        color: white;
+    }
+}

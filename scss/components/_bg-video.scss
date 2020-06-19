@@ -1,0 +1,24 @@
+.bg-video
+{
+    background-image: url(../img/about.jpg);
+    @extend %backgrounds-shared;
+    height: 100%;
+    width: 100%;
+
+    &__content
+    {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__logo
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+
+    }
+}
